@@ -1,0 +1,28 @@
+import React from "react";
+import {products} from './products.js';
+
+var product = products[0];
+let slug = window.location.pathname;
+slug = slug.slice(9, slug.length);
+for (let i = 0; i < products.length; i++) {
+    if (slug == products[i].slug) {
+        product = products[i];
+    }
+}
+
+function ProductDetails() {
+    return(
+        <div className="product-details-container">
+            <img alt="Product" src={require("./images/" + product.path)}/>
+            <div className="details">
+                <h2>{product.name} by {product.author}</h2>
+                <h3>${product.price}</h3>
+                <p>{product.description}</p>
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    )
+}
+
+export default ProductDetails
