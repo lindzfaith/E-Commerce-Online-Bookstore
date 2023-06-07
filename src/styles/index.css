@@ -3,7 +3,7 @@
   --lgreen: #606c38;
   --dgreen: #283618;
   --lbrown: #dda15e;
-  --dbrown: #bc6c25;
+  --dbrown: #bc6c25; 
 }
 
 body, html {
@@ -164,7 +164,6 @@ a {
   z-index: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  justify-content: space-between;
 }
 
 @media screen and (max-width: 800px) {
@@ -223,6 +222,7 @@ a {
 
 .product-details-container {
   display: flex;
+  position: absolute;
   float: left;
   margin: 20%;
   width: 60%;

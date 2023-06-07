@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import {products} from './products.js';
+import { useStateContext } from '../context/StateContext';
 
 var product = products[0];
 let slug = window.location.pathname;
@@ -23,6 +24,6 @@ function ProductDetails() {
             </div>
         </div>
     )
-}
+}  
 
 export default ProductDetails
