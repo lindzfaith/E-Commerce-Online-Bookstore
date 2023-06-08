@@ -16,9 +16,9 @@ function ProductDetails() {
         <div className="product-details-container">
             <img alt="Product" src={require("./images/" + product.path)}/>
             <div className="details">
-                <h2>{product.name} by {product.author}</h2>
+                <h2>{product.name} </h2>
+                <h2>by {product.author}</h2>
                 <h3>${product.price}</h3>
-                <p>{product.description}</p>
                 <button>Add to Cart</button>
                 <button>Buy Now</button>
             </div>

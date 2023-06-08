@@ -85,13 +85,70 @@ a {
   font-size: 20px;
   padding: 0;
   margin: 0 auto;
-  transition: color 500ms, transform 600ms;
+  transition: 200ms;
 }
 
 .label:hover {
   color: var(--lgreen);
   cursor: pointer;
-  transform: scale(1.2);
+}
+
+.recommended-product-container {
+  display: relative;
+  z-index: 1.1;
+  min-width: 300px;
+  width: 23%;
+  height: 320px;
+  margin: 0.5% 0.5% 0px 1%;
+  background-color: white;
+  border-radius: 15%;
+  float: left;
+  transition: all 500ms;
+}
+
+.recommended-product-container img {
+  max-width: 170px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.recommended-product-container:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 2px var(--lgreen);
+  cursor: pointer;
+}
+
+.recommended-product-container:hover h1 {
+  color: var(--lbrown);
+}
+
+.recommended-product-container h1 {
+  color: black;
+  text-align: left;
+  font-size: 18px;
+  width: 90%;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+}
+
+.recommended-product-container h2 {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.recommended-product-container h3 {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 16px;
 }
 
 .product-container {
@@ -100,7 +157,7 @@ a {
   min-width: 300px;
   width: 23%;
   height: 350px;
-  margin: 0.5% 0.5% 0px 1%;
+  margin: 0.5% 0.5% 8px 1%;
   background-color: white;
   border-radius: 15%;
   float: left;
@@ -108,7 +165,7 @@ a {
 }
 
 .product-container:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   box-shadow: 2px 2px 2px var(--lgreen);
   cursor: pointer;
 }
@@ -152,10 +209,9 @@ a {
 }
 
 .products-container {
-  float: left;
   display: flex;
   position: fixed;
-  height: 600px;
+  height: 360px;
   width: 90%;
   margin: 5%;
   margin-top: 160px;
@@ -175,6 +231,38 @@ a {
       margin-bottom: 110px;
   }
   
+}
+
+.product-description {
+  width: 95%;
+  position: fixed;
+  margin: auto;
+  padding: 10px;
+  margin-top: 560px;
+}
+
+.product-description p {
+  font-size: 18px;
+}
+
+.recommended-container {
+  display: flex;
+  position: fixed;
+  width: 90%;
+  margin: 5%;
+  margin-top: 550px;
+  height: 350px;
+  overflow-x: hidden;
+  float: left;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.own-line {
+  width: 95%;
+  height: 60px;
+  padding: 0;
+  margin: auto;
 }
 
 .hero-banner-container {
@@ -222,7 +310,7 @@ a {
 
 .product-details-container {
   display: flex;
-  position: absolute;
+  position: sticky;
   float: left;
   margin: 20%;
   width: 60%;
@@ -314,6 +402,24 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+  .product-details-container {
+    margin-top: 220px;
+  }
+  .own-line h1 {
+    text-align: center;
+  }
+  .product-details-container h2 {
+    font-size: 20px;
+  }
+  .recommended-container {
+    margin-top: 620px;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .recommended-product-container {
+    margin-bottom: 15px;
+  }
   .remainder {
     float:center;
     width: 100%;
